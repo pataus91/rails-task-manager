@@ -1,0 +1,18 @@
+<div class="container">
+  <div class="row  p-2">
+    <div class="col-8">
+      <h1><%= @task.title %></h1>
+      <p><%= @task.details %></p>
+      <input class="form-check-input" type="checkbox" disabled <%= @task.completed ? "checked" : ""%>>
+      <p> This task is completed</p>
+      <br>
+      <%= link_to '<i class="fas fa-undo-alt"></i> Back to list!'.html_safe, tasks_path %>
+    </div>
+    <div class="col-4">
+      <button type="button" class="btn btn-outline-secondary">
+        <%= link_to '<i class="fas fa-pencil-alt"></i> Edit task'.html_safe, edit_task_path %>
+      </button>
+    </div>
+  </div>
+</div>
+
